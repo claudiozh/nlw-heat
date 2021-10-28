@@ -8,6 +8,9 @@ export class Last3MessageService {
       orderBy: {
         created_at: 'desc',
       },
+      include: {
+        user: true,
+      },
     });
 
     return messages;
